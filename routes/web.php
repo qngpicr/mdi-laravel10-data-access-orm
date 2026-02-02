@@ -1,18 +1,19 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MainController;
+use App\Http\Controllers\RouteInfoController;
+use App\Http\Controllers\CpuSsrController;
+use App\Http\Controllers\CpuCsrController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
+// 메인 페이지
+Route::get('/', [MainController::class, 'index']);
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// 라우트 정보 JSON
+Route::get('/routes', [RouteInfoController::class, 'index']);
+
+// SSR CPU 페이지
+Route::get('/ssr/cpus', [CpuSsrController::class, 'ssrCpus']);
+
+// CSR CPU 페이지
+Route::get('/csr/cpus', [CpuCsrController::class, 'csrCpus']);
