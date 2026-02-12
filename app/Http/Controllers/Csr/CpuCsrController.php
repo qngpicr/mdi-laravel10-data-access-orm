@@ -1,6 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Csr;
+
+use App\Http\Controllers\Controller;
 
 class CpuCsrController extends Controller
 {

@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Ssr;
 
+use App\Http\Controllers\Controller;
 use App\Services\CpuService;
 
 class CpuSsrController extends Controller
