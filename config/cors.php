@@ -9,7 +9,9 @@ return [
     | 어떤 경로에 대해 CORS를 적용할지 지정합니다.
     | 일반적으로 API 엔드포인트와 Sanctum 관련 경로를 포함합니다.
     */
-    'paths' => ['api/*', 'sanctum/csrf-cookie'],
+    // 'paths' => ['api/*', 'sanctum/csrf-cookie'],
+    'paths' => ['api/*', 'routes', 'sanctum/csrf-cookie'],
+
 
     /*
     |--------------------------------------------------------------------------
@@ -26,7 +28,9 @@ return [
     | 허용할 Origin(프론트엔드 주소). '*'는 모든 Origin을 허용합니다.
     | 실무에서는 보안상 특정 도메인만 지정하는 것이 권장됩니다.
     */
-    'allowed_origins' => ['http://localhost:3000', 'https://www.example.com'],
+    // 'allowed_origins' => ['http://localhost:3000', 'https://www.example.com'],
+    'allowed_origins' => ['http://localhost:9300'],
+
 
     /*
     |--------------------------------------------------------------------------
