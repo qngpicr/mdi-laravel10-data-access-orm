@@ -29,7 +29,7 @@ return [
     | 실무에서는 보안상 특정 도메인만 지정하는 것이 권장됩니다.
     */
     // 'allowed_origins' => ['http://localhost:3000', 'https://www.example.com'],
-    'allowed_origins' => ['http://localhost:9300'],
+    'allowed_origins' => ['http://localhost:9041'],
 
 
     /*
